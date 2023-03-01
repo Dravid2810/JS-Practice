@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Scroll Images web</title>
+</head>
+
+<body>
+    <div class="gallry-wrap">
+        <img src="https://cdn-icons-png.flaticon.com/128/5544/5544140.png" alt="" id="backbtn">
+       
+        <div class="gallry">
+            <div>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.7DWXljTMZ9WRrQA-nIJd_gHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.rfrrCinbvDKXF4eLBqXuCAHaH2?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.y1l9vc1r9VreleEEUursrAHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+            </div>
+            <div>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.7DWXljTMZ9WRrQA-nIJd_gHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.rfrrCinbvDKXF4eLBqXuCAHaH2?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.y1l9vc1r9VreleEEUursrAHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+            </div>
+            <div>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.7DWXljTMZ9WRrQA-nIJd_gHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.rfrrCinbvDKXF4eLBqXuCAHaH2?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+                <span><img
+                        src="https://th.bing.com/th/id/OIP.y1l9vc1r9VreleEEUursrAHaHa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                        alt=""></span>
+            </div>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/128/318/318476.png" alt="" id="nextbtn">
+    </div>
+    <script>
+        let scrollcontainer = document.querySelector(".gallry");
+        let backbtn = document.getElementById("backbtn");
+        let nextbtn = document.getElementById("nextbtn");
+        scrollcontainer.addEventListener("wheel",(evt) => {
+            evt.preventDefault();
+            scrollcontainer.scrollLeft += evt.deltaY;
+        });
+        nextbtn.addEventListener("click",()=>{
+            scrollcontainer.scrollLeft += 900;
+        });
+        backbtn.addEventListener("click",()=>{
+            scrollcontainer.scrollLeft -= 900;
+        });
+    </script>
+</body> 
+
+</html>
